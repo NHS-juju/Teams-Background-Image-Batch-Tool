@@ -1,6 +1,5 @@
 $backgroundsdir = ""
 $renamedbackgrounds = New-Item -Path "$backgroundsdir" -Name Output -ItemType Directory -Force
-$useGuid = 0
 
 Function ResizeImage($file, $output) {
     $wia = New-Object -com wia.imagefile
@@ -20,9 +19,7 @@ Function ResizeImage($file, $output) {
 $images = get-childitem $backgroundsdir | Where-Object { $_.Name -Like "*.jpg" -or $_.Name -Like "*.jpeg" -or $_.Name -Like "*.png" -or $_.Name -Like "*.bmp" }
 foreach ($image in $images) {
     $fileExtension = [System.IO.Path]::GetExtension($image)
-    if ($useGuid -eq 1){$baseName = new-guid}
-    else{$baseName = [System.IO.Path]::GetFileNameWithoutExtension($image)}
-
+    $baseName = new-guid
     $mainName = "$baseName$fileExtension"
     $thumbname = "${baseName}_thumb$fileExtension"
     $target = Join-Path -Path $renamedbackgrounds -ChildPath $mainName
