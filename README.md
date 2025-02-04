@@ -4,8 +4,7 @@ Powershell script to process images in a directory and output the image+thumbnai
 ## Installation
 1. Download the Powershell file.
 2. Update $backgroundsdir to point at a directory containing the images you wish to convert to upload in Teams
-3. Set $useGuid to 1 if you want the filenames to be set to a random guid, otherwise the original file names will be used.
-4. Take the contents of the new directory within $backgroundsdir, and copy them to %LOCALAPPDATA%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads
+3. Take the contents of the new directory within $backgroundsdir, and copy them to %LOCALAPPDATA%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads
 
 ## FAQ
 
