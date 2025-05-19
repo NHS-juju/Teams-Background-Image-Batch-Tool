@@ -1,6 +1,14 @@
-param ($sourceDirectory, $autoCopyToTeamsFolder = 'N')
-$trueArray = 1,'Y','YES','T'.'TRUE'
-if ($autoCopyToTeamsFolder -in $trueArray){
+param (
+    $sourceDirectory,
+    [switch]$autoCopyToTeamsFolder,
+    [Parameter(
+        DontShow = $true,
+        ValueFromRemainingArguments = $true
+    )]
+    [string]
+    $value
+)
+if ($autoCopyToTeamsFolder.IsPresent) {
     $targetDirectory = "$Env:USERPROFILE\AppData\Local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads"
 }
 else {
