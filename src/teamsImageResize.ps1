@@ -1,5 +1,5 @@
 param (
-    $sourceDirectory,
+    $sourceDirectory = $PSScriptRoot,
     [switch]$autoCopyToTeamsFolder,
     [Parameter(
         DontShow = $true,
