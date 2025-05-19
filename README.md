@@ -3,7 +3,7 @@ Powershell script to process images in a directory and output the image+thumbnai
 
 ## Use
 1. Download the Powershell file.
-2. Run the [teamsImageResize.ps1](../../tree/main/src/teamsImageResize.ps1) file, passing in the path to the folder containing the image files using the param `-sourceDirectory`, and using the flag `-autoCopyToTeamsFolder` if running script to add the images to the Teams folder on the machine the script is being run on.
+2. Run the [teamsImageResize.ps1](../../tree/main/src/teamsImageResize.ps1) file, passing in the path to the folder containing the image files using the param `-sourceDirectory`, and using the flag `-autoCopyToTeamsFolder` if running script to add the images to the Teams folder on the machine the script is being run on. If `-sourceDirectory` is not specified, it will default to the location from where the script is being executed.
 3. If not actioned in point 2 by the use of the flag `-autoCopyToTeamsFolder`, take the contents of the new directory within `$backgroundsdir` and copy them to `%LOCALAPPDATA%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads` on the machine(s) you wish to add the backgrounds to.
 
 ## FAQ
